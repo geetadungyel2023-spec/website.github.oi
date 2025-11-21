@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geeta Dungyel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: black; 
+            margin: 0;
+            line-height: 1.6;
+            padding-top: 50px; 
+        }
+        header {
+            background-color: #e67e22; 
+            color: white; 
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        nav {
+            position: fixed; 
+            top: 0;          
+            width: 100%;     
+            background-color: #d35400; 
+            overflow: hidden;
+            z-index: 1000;   
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white; 
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #fad7a0; /* light orange */
+            color: #d35400;
+        }
+        .content {
+            padding: 20px;
+            color: black; /* ensure content text black */
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #e67e22; /* orange headers for sections */
+            border-bottom: 2px solid #e67e22;
+            padding-bottom: 10px;
+        }
+        .section p, .section ul {
+            color: black; /* ensure paragraphs and lists black */
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .image-gallery img {
+            flex: 1 1 calc(33% - 20px);
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #d35400; /* darker orange */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media(max-width: 768px){
+            .image-gallery {
+                flex-direction: column;
+            }
+            .image-gallery img {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>History of Scouting & Core Values</h1>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#history">History</a>
+        <a href="#promise">Scout Promise</a>
+        <a href="#motto">Motto</a>
+        <a href="#law">Scout Law</a>
+        <a href="#anthem">Scout Anthem</a>
+        <a href="#leadership">Leadership Training</a>
+    </nav>
+    
+    <div class="content" id="home">
+        <div class="section">
+            <h2>Welcome</h2>
+            <p>
+                Welcome to the Scouting in Bhutan website! This site is dedicated to sharing the rich history, core values, and leadership training of the Scout movement both globally and within Bhutan.
+            </p>
+            <p>
+                The author of this website is Geeta Dungyel, an avid scout and community member passionate about youth development and outdoor education. Geeta has participated in numerous scouting activities and training, and aims to inspire new generations to embrace the ideals of scouting.
+            </p>
+            <p>
+                Feel free to explore and learn more about the promise, motto, law, and anthem that guide Scouts worldwide. Join us as we celebrate the spirit of scouting and the journeys it inspires.
+            </p>
+        </div>
+    </div>
+    
+    <div class="content" id="history">
+        <div class="section">
+            <h2>History of Scouting</h2>
+            <p>
+                The Scout movement was founded by Robert Baden-Powell in 1907 in England. It started as a way to teach young boys survival skills, character, and leadership through outdoor activities and community service. Over the years, scouting has grown into a global movement with millions of members dedicated to making the world a better place through service, leadership, and personal development.
+            </p>
+            <div class="image-gallery">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Scouting outdoor activity" />
+                <img src="https://images.unsplash.com/photo-1520962918493-3f4a0b0a4c4d" alt="Scouts camping" />
+                <img src="https://images.unsplash.com/photo-1549924231-f129b911e442" alt="Scout training" />
+            </div>
+        </div>
+    </div>
+    <div class="content" id="promise">
+        <div class="section">
+            <h2>Scout Promise</h2>
+            <p>
+                On my honour,<br> I promise that I will do my best,<br>
+To do my duty to God,<br>
+Duty to tsa-wa-sum (King, Country and People),<br>
+Duty to self, parents, others <br>
+and to obey the Scout Law
+            </p>
+        </div>
+    </div>
+    <div class="content" id="motto">
+        <div class="section">
+            <h2>Motto</h2>
+            <p><strong>"Be Prepared"</strong></p>
+            <p>
+                The Scout motto encourages members to always be ready to face challenges and help others, embodying the spirit of preparedness and service.
+            </p>
+        </div>
+    </div>
+    <div class="content" id="law">
+        <div class="section">
+            <h2>Scout Law</h2>
+            <ul>
+                <li>A Scout is trustworthy.</li>
+                <li>A Scout is loyal.</li>
+                <li>A Scout is helpful.</li>
+                <li>A Scout is friendly and considerate.</li>
+                <li>A Scout is kind.</li>
+                <li>A Scout is obedient.</li>
+                <li>A Scout is cheerful.</li>
+                <li>A Scout is thrifty.</li>
+                <li>A Scout is brave.</li>
+                <li>A Scout is clean in thought, word, and deed.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content" id="anthem">
+        <div class="section">
+            <h2>Scout Anthem</h2>
+            <p>
+                *The Scout Song* (example lyrics)
+                <br>
+                "On my honour I promise true,
+                To do my best for you,
+                To be honest, kind, and brave,
+                And help others every day."
+            </p>
+            <div class="image-gallery">
+                <img src="https://images.unsplash.com/photo-1576601153624-0d56d8e1e3a8" alt="Scout group singing" />
+            </div>
+        </div>
+    </div>
+    <div class="content" id="leadership">
+        <div class="section">
+            <h2>Leadership Training</h2>
+            <p>
+                Leadership training in scouting develops skills such as teamwork, responsibility, decision-making, and communication. Through activities like camping, community service projects, and team challenges, scouts learn to lead by example and serve as positive role models.
+            </p>
+            <div class="image-gallery">
+                <img src="https://images.unsplash.com/photo-1520962918493-3f4a0b0a4c4d" alt="Scout leadership" />
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Scout campfire leadership" />
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Scout Organization | All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
