@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geeta Dungyel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f8fb; /* Very light lavender */
+            color: #4a4a4a; /* Dark gray for text */
+            margin: 0;
+        }
+        header {
+            background-color: #d28ca1; /* Soft dusty rose */
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(210, 140, 161, 0.4);
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 1.2px;
+        }
+        nav {
+            background-color: #8a5c77; /* Muted mauve */
+            overflow: hidden;
+            box-shadow: 0 3px 4px rgba(138, 92, 119, 0.6);
+        }
+        nav a {
+            color: #f9f8fb; /* Very light lavender */
+            padding: 18px 25px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            font-size: 1.15rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-right: 1px solid #b38cae; /* Light mauve border between links */
+        }
+        nav a:last-child {
+            border-right: none;
+        }
+        nav a:hover {
+            background-color: #f0d4e5; /* Soft pastel pink */
+            color: #6e3b54; /* Deep muted purple */
+            cursor: pointer;
+        }
+        .content {
+            padding: 30px 25px 50px 25px;
+            clear: both;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2.3rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #b46a80; /* Medium rosy pink */
+            border-bottom: 3px solid #b46a80;
+            padding-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.7px;
+        }
+        .section-content {
+            font-size: 1.22rem;
+            line-height: 1.65;
+            margin-bottom: 25px;
+            color: #5c4a58; /* Soft gray-purple */
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .image-gallery img {
+            width: 30%;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(180, 106, 128, 0.25);
+            transition: transform 0.3s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(180, 106, 128, 0.45);
+            cursor: pointer;
+        }
+        footer {
+            background-color: #6e3b54; /* Deep muted purple */
+            color: #f9f8fb;
+            text-align: center;
+            padding: 14px 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            box-shadow: 0 -3px 8px rgba(110, 59, 84, 0.7);
+        }
+        @media (max-width: 700px) {
+            .image-gallery img {
+                width: 80%;
+            }
+            nav a {
+                float: none;
+                display: block;
+                border-right: none;
+                border-bottom: 1px solid #b38cae;
+            }
+            nav a:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Geeta Dungyel</h1>
+</header>
+
+<nav>
+    <a href="#bio">Bio Data</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#experience">Experiences</a>
+</nav>
+
+<div class="content" id="bio">
+    <h2 class="section-title">Bio Data</h2>
+    <p class="section-content">
+        Hello! My name is Geeta, and I come from the beautiful village of Samdrup Jongkhar. I’m 15 years old and currently studying in Grade 9 at The Royal Academy. I truly enjoy learning new things every day and believe that education is the key to unlocking my dreams.
+
+Besides studying, I love exploring my interests and hobbies, meeting new people, and taking on challenges that help me grow. I’m excited about the future and eager to make the most of every opportunity that comes my way.
+    </p>
+    <div class="image-gallery">
+        <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEUYPRcSW5%2FO0uXWaBH8sg6DmjvyyovhFmE0L7UgmgddsKuYQpFJtPO5XPDNYDdePinmP8kNUhEkyao39cu1vuuD5aiVN6lXCqmThkbhnCD%2FSW7GnvcZ%2FI4usZVc%2FNf5rKoIUbYT3SSvshjDTk0pyDCl233yOhDCqWnniYaWal7kCsbuw5o76pwrNortcklBC41XjIDfbOEaIRPJLGNyDKH%2FM8ykea9xku%2FZYcgiT%2BRaWiTMK2gz02nzwqx6TIqYPiDXe22NzlUpF%2F1KitV0exi8LMMdEHqodZ1sRf9yhKvbrA3xDBZjCYU2IwxgrBHb%2FLJIAwjFuRvtBkBBzzqbInm%2F4DypzbJt49TvGW%2FK7a945E581TpdNZnRJ46%2B%2B9aKV3cjtTVoT5t4C8J0%2FgAN7LkbiH11EmJ%2FWbZzXekQt5cJznL7AOHNIRWUQNHb2cYnHOyovpD8zPT5ft5BCIVF94RCtIoN8r4mLUU2lUlgXFQE%2BSLHDaDVGf5h7Coy9kGCQBplpFEVMKXBygMpqre8jPZ8rW75E0kTDtThIzJYoI1k57kPp5QQUKXF50%2FKKNzDK9HsneVxG7wu7S%2FfV8sOn2kDFEcgSxlbuEWToJ9%2FJbg83X2WRm%2Fav5syLU2Evw%3D%3D&allow_caching=true&sz=w2940-h1662-rw" alt="Portrait of Geeta">
+        <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEVkbxiGHE5%2Bgd4DfdBup0JIWbjrygII63XCPBUbO5e8i3lrTlfin%2BQSzmeRnC3Qy01EfV2sXH%2Fy7Usq4FHVh1K5CaRpDD34R8quJo7mXwXVw6kt9nQxmD%2BIezBPlhkwlWKXBiJvNsSdwxK0U8%2FL3juHOZgdDTnfz2hVDMmd5VmAr4Ebb%2FR0VoR3JDYXL4lcJqC%2BU60H2ppgtidjnm7PnYopl%2Bmbs9lV6RlzTmzgSYAZrKjAnJUN6hazrXLZzdMVMNAAbXr9ib76wTEAhBIYn7IpRbQJ2QCvNe1PnpfbDJb0xW5X4xwYUA812bdEseAfcnyob22Xf4Zt0eMYzXFsvWYQ9WsGUPoIodxBx4pkza8o7031OaBnyBOs0jR06lODqGkHFyRtVCSbejQkqAGNWM%2B9c5zXzAvCtfehwyKV5Clc%2FGaVscXnEyeRV7prYeb23Eim37u6kGjBcrF%2FHMrad8S3w4mii3f2zcPY0mF9KTh%2B1uuD5LlhLcZQaeuG7LAe9StllhuWdTQuNaK6EmmMUJPmdGWSOQRaMROphTJOPxyM%2F6XbwtSdWoDNwaefVVUBPZhV%2FhxSBgPLiLDyx1Xy%2FL3SWXe%2FsOX5rk%2BpZ1I54sJpSnQROBURIHWzblUwYg%3D%3D&allow_caching=true&sz=w2940-h1662-rw">
+    </div>
+</div>
+
+<div class="content" id="hobbies">
+    <h2 class="section-title">Hobbies</h2>
+    <p class="section-content">
+        I enjoy painting and sketching, even though I’m not an expert yet. I find joy in expressing myself through art in any way I can. I also love taking pictures of beautiful views and landscapes—it’s a way for me to capture the world’s natural beauty. Besides that, I enjoy watching movies and listening to music, which help me relax and feel inspired. Some of my favorite movies are 
+<a href="https://www.bilibili.tv/en/video/2009624700?bstar_from=bstar-web.homepage.recommend.all" >Finding You</a>, 
+<a href="hhttps://www.bilibili.tv/en/video/4787020383393280?bstar_from=bstar-web.homepage.recommend.all" >Hope</a>, and 
+<a href="https://www.bilibili.tv/en/video/4794573526536704?bstar_from=bstar-web.homepage.recommend.all" >Miracle in Cell No.7</a>.
+    </p>
+    <div class="image-gallery">
+        <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEXTNjPnwMQoVZ3fTBaL4ygKcjF1z%2Fsk%2B%2ByqKsAS18qccCAiRPmZxC7eQgd6j%2B%2F%2FUpxpPx8QEDppmSDsOC2lh0mh2ikl748eFdqcdjMyfkZ6oOzqfJKdwBqM7%2BBG1NJ7qj5xqqJCYr7zupLGsu8HcDpfzhIbXsHVveNyf5JhY3qBHtYfYZb%2B%2FlwXY7y2yD%2FRJAjuvApeH31AwAQzE7%2BvgjshP2tLO9pZu37cKEh955WLfBYtHW9fSPhHwbFbBkrTOGUkdrr%2FPgTRxcfV9XA9vBt17%2BDaQSnUuX1F5%2Fk%2Fw8L0vppvFKf2pBScnlLNSR5uVUOiAvusftvL2hqDamMqwQ8IF4QuzC93Ze1iE29PcDrV5OptaDkodbRpRP1QpBE4rDmxrqvh53ssYbgbTUuEw8GA4lALx4BR6ARj%2BJo%2BzEyhMd4FvQzKCDUqEeVODCb2At1BVEC02bNfkr4%2BggCZZVymNrvU%2F7jSisVFXSFjmg5UHdVL1ye0vxvAxDgFBn%2F2ofUu7C9Vix7XHcLuPqV7jki%2F0paVThCO1JROD9yZ%2BoyjY6cK7YHEXaI%2F%2FXTyohkNQ40Dh3YGUazmJLpxsbnU68f%2FS0up4MvGdWAj5st2trepOQ2hchXHWvtk5LgZxYw%3D&allow_caching=true&sz=w2940-h1662-rw" alt="stars">
+        <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEVAoE1mt7LK%2Ftr1EVcq56oAb0PYsKhKYzKAsPTup5JfEgO8KMds1k8iys9TbhhyuEsXDzPC7chMOVD85XUT5Iz0w%2BQK7jQn%2BifEzLDrhopf%2BNFRoejT35zyEdwtP5E80bSdVp2PEPhQUH0A0%2FYOW76y5EZshRv3d82wY6zRRT%2BzA9dAzJnCDniNtbKBT7bPJ9cu5H3yvWLZ8Eu6O%2BTNevGqX7WMeGGN38MzXBOI8kT8CRFMvA8HAeszz%2BUiAJG4voVau7bNw0Y0YeTxr8a4EngHaWKmCOghXZyfcKng8VC4karxHePNXQ0OfjmmS7HPx%2FWj116xxzcFEhzWMM0JdoRhRx0VD5qEmUVZfUdKPYhy0AFyNjM9B5bJ1GJ31Uy%2BQ%2BCc9PoVrP2UN6VbGFmRhke%2FRa70YJvEwhH8vLUvK%2FcgZwucOkivtkAoL6M%2FxuQj9DSWn9B2J4eOvTL9OYk6h8p95u2NiytoJP6sImXAU7iCGzDbckOs%2BsXZhXEOfbGYdPKLit9aghWEL9ZKuR8bBIxH3PPh%2B0%2BRBbdX3kHDWoMDn%2B%2BCanWDXgisSy9IbkNTPEpAOcgxsJ2FTVXdbcnJlOhj1rf4CFylfbpc999nDbr2suyM%2F6lBb4kp50iF2w%3D%3D&allow_caching=true&sz=w2940-h1662-rw" alt="thimphu night view">
+        <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEXm5mvL8l1FJMFM28aw9YW%2Bk6a6EMjLz28CZnLgTACpnnXI26R4OJRbpTtvbP3rh%2Fss9UnMpXnmBPJG7MGpR69Z5uUJd0Gn7vdsBkBn69bm3seytfV1w3TPBMlgArAQ4EW0amg%2BvWkY%2Fh6WtAJwLvSUUjttKQbX7DFc1RRnbDJcp3zZBZ8E3fh9OImLjGLkdKckGCDry9xbaKEnoaO5XyMFo7dv8HOxRD6TuVYoMgsFBH%2FGHqoreaRHCa%2B%2FxKKKsc6i9Mks40Yeo%2F47BwYBSC5bNyTtDEjV%2Fsrz5lH%2Fb790t6PyHCRx0lC6e9FZLSHYvNj%2B%2B3Eh9ve7D4shdZvF%2Fp%2F0D1DCRIXXD27fuiUdXGEcGhvSmyjiIfOiy%2Bggc6FQ20bMeiCCHEvpV5yBVgK4wgDpzJV7LOPGAGoF8GJuntP5dImjC%2Be6DJ1QBdhTRsxG4WfbDPllzNtICIaHUoQoahRZYZvQRoRjI0zS3SNPnISoOJRzoo2Qb%2BE0UT5DYqzNqOjQNk2dKIixjWLbFasnqdKgBQFhASUToMAKie%2BMcIgTB43QDsNiEzNk0gaJkTWGh5KHLTpHUg6otq0h9JfeovnaKKKKxbXSTvJxrupzvzyVLYNjQjSqLXDADojkcow%3D&allow_caching=true&sz=w2940-h1662-rw" alt="moon">
+    </div>
+</div>
+
+<div class="content" id="experience">
+    <h2 class="section-title">Experiences</h2>
+    <p class="section-content">
+        Getting into The Royal Academy has been my biggest and best experience so far. It was my first time being away from home, which was challenging at first. But even though it was hard, I managed to adapt successfully and make the school my second home..
+    </p>
+    <div class="image-gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQETsrtR0IdgDROSgztx99ewXpVzocwsSb79Q&s" alt="TRA">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrdC0pJECGJgssxadq1TzX34q2F_BiNKnNrQ&s" alt="Students">
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Geeta Dungyel</p>
+</footer>
+
+</body>
+</html>
