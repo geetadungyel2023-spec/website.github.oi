@@ -1,0 +1,261 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Geeta Dungyel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("https://i.etsystatic.com/34102148/r/il/f4130c/3707430903/il_fullxfull.3707430903_iaxo.jpg") no-repeat center center / cover fixed;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #9B7FCF;
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      z-index: 99;
+    }
+    nav a {
+      color: white;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #E6E6FA;
+      color: #9B7FCF;
+    }
+    section {
+      padding: 100px 20px 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(255,255,255,0.85);
+      border-radius: 15px;
+      margin-bottom: 50px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #9B7FCF;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .text-container, .bio-text, .schoollife-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      margin: 20px auto;
+      max-width: 700px;
+    }
+    /* Biodata */
+    .bio-photo {
+      width: 150px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px #bbb;
+      margin-bottom: 20px;
+    }
+    /* School life */
+    .schoollife-text img {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      margin: 18px auto;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px #bbb;
+    }
+    /* Mentor Mentee */
+    .mentor-img {
+      width: 160px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #ccc;
+      margin-bottom: 9px;
+    }
+    .mentor-name {
+      font-size: 20px;
+      color: #8b60bf;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+    .mentor-subject {
+      font-size: 15px;
+      color: #525252;
+      margin-bottom: 17px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    .mentee-block {
+      width: 120px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .mentee-block img {
+      width: 100px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: #eee;
+      box-shadow: 0 1px 6px #dadada;
+    }
+    .mentee-name {
+      font-size: 14px;
+      color: #402d84;
+      font-weight: bold;
+    }
+    .mentee-grade {
+      font-size: 12px;
+      color: #282874;
+    }
+    footer {
+      text-align:center;
+      padding:10px;
+      background-color:#f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#aboutme">About Me</a>
+  <a href="#biodata">Biodata</a>
+  <a href="#schoollife">School Life</a>
+  <a href="#mentormentee">Mentor Mentee</a>
+</nav>
+
+
+<section id="aboutme">
+  <h1>Geeta Dungyel</h1>
+  <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU8GGvVTtSCi%2FvUiB1Iab%2FglFO%2F7TGMSO9s%2BRxBf7Qc81KwQNhJ3h29PCriahCezM9FL5wGtueqDRS8%2FYGdh4u1M02Un2yORKZd96zbpoJHky%2Bh8XRzt1xrUlNjZ7z9IA6rKK1cs6HZkxVTK1U%2BNpbVA1RZHRsYupD4G23he68z1P9cH4%2B9%2BgPKZxXGNbKBZpckAHdrEkWSL2WhdSgFXM9bQm4lY4nGW%2FdrmfFPZZjB66%2BCIpqg4Aukp2p%2BOx6qIFF94htqzJoOBaWBtVC3g4r7i5%2FIIbxXV2kPeWljpKNC8uILI3n%2FsXwN5ywlbvFqCg5tvVoRRnq1goUzKCW4uJANNDecE2SHCKHKrAvjSdHhJz51KV%2BcPkTBBHL5iDNX%2F%2BP%2FRMDI6B8YPwHAIfXDrrGq7e0xXLmDHQvkhFsWFV5%2B6nrDvlTOUKCCk4HLObNx0GqfjulBHiIvjUDjpy9cGXjZ4a4MId1a2UGr6aOxvLeLokLvjWYiKSD9bIeQurAQDnLwGO8NdZVT4RNh0GUg1nxC0XMY1r3kWsrxA8daztx6G8gX%2BBILXXnQCtX4q7bzwyOqjv%2FfxJ510qbTN56eKmzl77aXSSaZi1jdVrb2aRIN4SNWSaX9ZwHEaXuNT65x&allow_caching=true&sz=w2940-h1662-rw" alt="Me">
+  <div class="text-container">
+    <p><b>Welcome!</b> I am Geeta Dungyel, a curious and enthusiastic learner from the scenic village of Samdrup Jongkhar. I am currently a Grade 9 student at The Royal Academy, where I enjoy diving into various subjects and expanding my horizons.<br><br>
+    Outside of academics, I am passionate about discovering new hobbies, meeting diverse people, and embracing challenges that encourage personal growth. I am motivated by the endless possibilities that the future holds and am committed to making the most of every opportunity along the way.</p>
+  </div>
+</section>
+
+
+<section id="biodata">
+  <h2>Biodata</h2>
+  <img class="bio-photo" src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU4gQfqg7wBu0YndhLvJDcPE0E35G2HJV2hF9PM1dNBY1U0c2wO1IvPN5eMLNk9LWqBf5ePcdxy%2Bz5gxHoOCYbvai5rcvXsPh%2FjrAeFYfEBl5ShiWhIEFOIccKjDbI%2Fz8muVngx8IeUjNSjQOljaVVLqGSQd4umFoCmJemhFgyvzeAmNlSoOkIBeBzRXTvRo0WsZqyVP0mcY5TBxczVmiYmyT11VvenOQRYf9LIaJXlsWxMKVSjqANf%2FFZVLftHo%2FgU0Ue%2FbsywADQe%2FiyoF%2BOsZjxeAeQ7qj1G4S%2FqV6qtEf9ezjgqv6ynPWU%2B0RtB9P5DwgpfQEpLhyL6h5M7mci5qmUONCnTsDb6TQiPQARS2aPU7jr615vZyf4LgxiD7c8Kh5CcWAj3B458aixvh%2FG%2FlNSAVTEnt5c1QfxubCLVB5UOWEivf4Y9S2cdShgmgG4gMYCtxO7LwXc0EEqkipYcvZX8c%2FOQODY7BTpHm66QPuCfxjVZ7K0prRvpgodoK8FteSgduSuqCJf5vvZC%2BW9TVlu%2BnFuMowUF9GplJhSr%2Fmeb%2B6m7seQup8ONpkzrYVuogGBOVmsbKtO%2Bf553Xq1olW8gzbW9SQcuDtw71rR7GDiVGU0R6TNpeW48ceo%3D&allow_caching=true&sz=w2940-h1662-rw&auditContext=forDisplay" alt="Geeta Dungyel">
+  <div class="bio-text">
+    <p>Name: Geeta Dungyel</p>
+    <p>Age: 15</p>
+    <p>Grade: 9</p>
+    <p>School: The Royal Academy</p>
+    <p>Village: Pemathang, Samdrup Jongkhar</p>
+    <p>Hobbies: Reading, meeting new people, exploring interests</p>
+    <p>Ambition: Learning and personal growth</p>
+  </div>
+</section>
+
+
+<section id="schoollife">
+  <h2>My School Life</h2>
+  <div class="schoollife-text">
+    <p>School life at The Royal Academy is filled with learning, friendship, and fun. Every day brings new lessons and experiences that help me grow both academically and personally.</p>
+    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/83a36f99-0034-4452-ae5b-4d6dd87b9311/IMG_0817.jpg" alt="TRA">
+    <p>My teachers encourage curiosity and teamwork, making subjects interesting and challenging. I enjoy participating in various activities, from sports to art, which help build my skills and confidence.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0kRlhGiE-rDCEYN5eox1n0AbrFw0QBj6Iw&s" alt="TRA">
+    <p>With supportive friends and mentors by my side, I feel inspired to work hard and strive for excellence. School life here is about making memories, overcoming challenges, and celebrating every achievement along the way.</p>
+    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/aa55776a-400a-4b44-ae0e-a77fff16f82a/Graduation+Ceremony+Group+Photo.jpg" alt="TRA">
+  </div>
+</section>
+
+
+<section id="mentormentee">
+  <h2>Mentor & Mentees</h2>
+  <img src="https://media.licdn.com/dms/image/v2/C5603AQHurp2vjGylEA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1527177901095?e=2147483647&v=beta&t=kj8kqXXPcb4QIZOPLZrhafmnWRX4lPMHxewNj6ErOSg" alt="Mentor Portrait" class="mentor-img">
+  <div class="mentor-name">Mr. Tsheltrim Lhendup</div>
+  <div class="mentor-subject">Physical Coordinator</div>
+  
+  
+  
+    <div class="gallery">
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkd-vQj7pMjnnZAKPufqKhcJqK8IWFvXkXKxvNKVjG-72zWb1VNO6RJwNgWIaW9CGM-jnAdnIlljGWKbe1_ZtNKHaBUWeNhSI9hWIL6V0eeO74gmi6ZaYBLmjjcLXYyiq8JIn7cYFk7ufuiFF51dC7xZM49lOYUb7K6xaZqiAOG4VKB8zHV1dqJR5yYXVHcpJ0OKHeA5EJLCqDOBPKMPw74xZFPytDk8pw=w1280" alt="Geeta Dungyel">
+        <div class="mentee-name">Geeta Dungyel</div>
+        <div class="mentee-grade">Grade 9</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkd3gGGWykRigK7hEzaE-eWB5pddOaEbbqtFsMMVixqpPWYuq_cSnzikrybRnjsAG7huw_EHu_r6E1gf5ozRtom940KHp-NSBivD2Hw3KD7kZ23whIDYFyKRNef2-l2xyt6K1bsFS0isgFqQfar64r5r6v5anlFTj_Writ5FHsoyoM47xbAK35FjF6_VUMI8hbEI3xhwLqsUm5n1Q_K1grjxEoqxWKjQjngE=w1280" alt="Deki Seldon">
+        <div class="mentee-name">Deki Seldon</div>
+        <div class="mentee-grade">Grade 12</div>
+      </div>
+
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkd0gc-wjhI1BHvBIH8eMT6Wa6fQzw2BEsT0nosC__pweY0g-_OJudMla5iNYs_pT0QwXQ7_mW73SiRTp5Ahy11NzYXsRJvglSju5TCjlPxwmlHIJ1YAjZVruz8QQSjVrCga-gdsoYV27Naz08hBG7jI_hPX4_9aDFKcI6IYxGNzRLWscFhDFSXeM7YX3n4vq9L1U7fSv5qVA3eKHnaGhYrTs4pqlVzK8KEEGqU=w1280" alt="Ngawang Pemo Dukpa">
+        <div class="mentee-name">Ngawang Pemo Dukpa</div>
+        <div class="mentee-grade">Grade 12</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkf6389NuwXZcHRpa0NWFzvg74rtrfGNeFKunJMuL1yT-rc_ybHsYUm3C1J3aNW_QwjlPjqIOxqkIL-Nfy3C-2tMABbZ8Fz2mQVCpeptTTiAGXk_M3-ASElH32hQ59fZx3EpUSxTW_nWkBVYLhd6UAAK3f6BMpoFmCr-XGcLXe4pHc2SDH0ODFD7wZXzYER_m3gEV0gU_VQxpcWTR_GgRMDE6P9PPAHGWgSH0E4=w1280" alt="Singye Sherab">
+        <div class="mentee-name">Singye Sherab</div>
+        <div class="mentee-grade">Grade 11</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCke6j0g0K19OHuJbhTdeeI3bCaBAfnWqmyXwoDCvk4xI9IIwS7qhONjVNN5AibByHvaf4BTt8JNmWqHfz_igUp9LSXgZBrFcRprXa3NMMaI_BEjMveULc3pw5tW5nSznsqXzpn6cF0I3RA4ajgImz6b46_xpW5DC4cRaIO7xUHgRaxFEpvaRv7RVxGfEaWBaJ8pFIOjdASSOGpV0J10XjqLEr7gvoQI4UIM9=w1280" alt="Tshering Yangdey">
+<div class="mentee-name">Tshering Yangdey</div>
+        <div class="mentee-grade">Grade 10</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkcWmS0T-EAxSTiiCl0_sYJKfnQfZeGKB82wevJ2HqspDlADLjw576W6jnAdCOg8wqyBposuO7IfcHJB_Y1yD_4lgJHYzV4EH64hb6AvNCzCRQPwAka2AHsxroNOUWqwX4IwsQbxi_qSRtdf0vH7x6rwfPZMXNybLLL42okQIML7rjx9arfnU9ANHw2ky-2SwaWdauTFndxkFLiqRFy35RZqUe7t7M0nrBCjWyk=w1280" alt="Yonten Thai">
+        <div class="mentee-name">Yonten Thai</div>
+        <div class="mentee-grade">Grade 10</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfsAwCR8UKciAKoHN6yhIR_E0e3Rvm75KLu35byGO2ckzOXFwUwBEzFcZsKTQnKmxZdLAvhenZWAjOESv3iHrh5G9JmlvPLMhKFhw7PNjMCZotg0sA2M1oNTlzzukCiCG2DhMnKON4t36uSMhHbqbIuZ5jmlxA5SCt0k7i7AFtgaIBZFw7-s7mLPvD32HGCAwV35C4xNHae5cCl18FVYrtEpjX26eFWmxEHJ-4=w1280" alt="Chandan Kafley">
+        <div class="mentee-name">Chandan Kafley</div>
+        <div class="mentee-grade">Grade 9</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkdJZmzFHGBBw1ZMa5wOYEPPpeAuliGJrQ7hY2uAcTDxVdtDhHqL1V-eb5czxxJLaXKMv8HH3iQcQfcRsbjTrA2UHuErgaM31_V1_lgiI2s1x3bhE2F3zpPys4NYEUZ0_X7DC6SsgTM6mXOoWgqPjzxFZ0O9dKFx7S3MLlR9slyX2e2tcb1EUvWfweG6qATA_RcYUYNpq4UG1ylte71oTbDWBB01iZyjGqJo=w1280" alt="Jjigme Rigsel Dorji">
+        <div class="mentee-name">Jjigme Rigsel Dorji</div>
+        <div class="mentee-grade">Grade 8</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfbw0LOYnB-mhzpQe7o2VXBMTizSlvvXqNnmFKJxAV-zZ-mkKLoTTYdX3hGWuM1Bwg-DqyjHjn0sI0WjZ7bZbhvkAjiVb1OntUIE2HFBXHcy0OLYfkm_iCv2Qt5dBSM0LmVf_Sa-iY3gRy-3QbsiPKD2vPcl12HtxSoPZboqyVOeX0KsmNje2I0zOqTQpE8I_K9ax7j4HUOl9eYHsYkI4N19gRxQkW3fOpFFUE=w1280" alt="Pema Samdrup">
+        <div class="mentee-name">Pema Samdrup</div>
+        <div class="mentee-grade">Grade 8 </div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkd2nihWPMRqlqWsENmW9CceB8YY7_J07pg39ZgTCumjythvAawCs9V1Rt07aIap-ZC6xCasybXNct9XsuegaNPW1d9D-wuWCJ2Y3q2kB2zat2CCnjblesqaWLQAU-A05VFDIpom3vg_2SAKjsvO60FM01Ib9D1atSHm22hOF9qG2LQDf1wQy3p7NwBOkofIVVwaVbQcXrlFWSytteQRE3p3IVldQgrwshx7=w1280" alt="Sangay Yuden">
+        <div class="mentee-name">Sangay Yuden</div>
+        <div class="mentee-grade">Grade 8 </div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkfNoC_s1mvddwWxwTV-N3jf3QUB4RGtaxWW2x_t9tbxIhJXuwnhcZfi6V7cy6Wuk4M3pKO2xqxwc8KkeozNISE-Xa6yZ7YkVZMbjF-rVQ-8I4BdHCENwtbyfd1_hEr4ao69N3oXCenu1EBNlIt4SjDUOJPl9mmcprBSu_9ESMdSIKXDOUQJmj8pcXPqAwNcVOHOpTdwlQenqaitcjlsF5_2w6UCfqjgclmfzQA=w1280" alt="Jurmey Rigsel">
+        <div class="mentee-name">Jurmey Rigsel</div>
+        <div class="mentee-grade">Grade 7</div>
+      </div>
+      <div class="mentee-block">
+        <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkcFVg1whp3FBJt8IQeoYkg-2JkaHZrPrj3Or-upg6OtNFKuVhNpzMRI5TL_fiezv2Jr83NUUpPM13Ui7Ys_AYvYoD_c7Q-o2AnXLdR7yGL4m5uJhGIACuqUykE6rZsJnSc5ZOr6XptdAVBZ9WJznM5LAfOJTxzE0t3q3Pzydtzc6wb8bGcmVQNdnvlQf6-NeLt8v2fiontic41LBp18W4CGY1i_Io3Dsy9843U=w1280" alt="Sherab Wangchuk">
+        <div class="mentee-name">Sherab Wangchuk</div>
+        <div class="mentee-grade">Grade 7</div>
+      </div>
+    </div>
+  </div>
+  <footer style="text-align:center; padding:10px; background-color:#f2f2f2; font-family: Arial, sans-serif;">
+    @ 2025 Geeta Dungyel
+  </footer>
+</body>
+</html>
+
+
+
+
