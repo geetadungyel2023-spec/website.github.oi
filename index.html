@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Geeta Dungyel</title>
   <style>
     body {
@@ -103,16 +103,24 @@
       box-shadow: 0 2px 8px #bbb;
     }
 
-    /* Gallery styles */
-    .gallery {
+    .MTV {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center; 
+      align-items: center;     
+      margin-top: 20px;
+    }
+
+    /* Gallery styles with 3 pics in a row */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
-      justify-content: center;
+      justify-items: center;
     }
 
     .gallery img {
-      width: calc(33% - 10px);
+      width: 100%;
+      max-width: 200px; /* size of images in the gallery */
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       cursor: pointer;
@@ -124,14 +132,20 @@
     }
 
     @media screen and (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .gallery img {
-        width: calc(50% - 10px);
+        max-width: 100%;
       }
     }
 
     @media screen and (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
       .gallery img {
-        width: 100%;
+        max-width: 100%;
       }
     }
   </style>
@@ -142,13 +156,14 @@
   <a href="#aboutme">About Me</a>
   <a href="#biodata">Biodata</a>
   <a href="#schoollife">School Life</a>
-  <a href="#gallery">Gallery</a>
+  <a href="#gallery-pics">Gallery - pics</a>
+  <a href="#gallery-videos">Gallery - videos</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="aboutme">
   <h1>Geeta Dungyel</h1>
-  <img class="about-photo" src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU8GGvVTtSCi%2FvUiB1Iab%2FglFO%2F7TGMSO9s%2BRxBf7Qc81KwQNhJ3h29PCriahCezM9FL5wGtueqDRS8%2FYGdh4u1M02Un2yORKZd96zbpoJHky%2Bh8XRzt1xrUlNjZ7z9IA6rKK1cs6HZkxVTK1U%2BNpbVA1RZHRsYupD4G23he68z1P9cH4%2B9%2BgPKZxXGNbKBZpckAHdrEkWSL2WhdSgFXM9bQm4lY4nGW%2FdrmfFPZZjB66%2BCIpqg4Aukp2p%2BOx6qIFF94htqzJoOBaWBtVC3g4r7i5%2FIIbxXV2kPeWljpKNC8uILI3n%2FsXwN5ywlbvFqCg5tvVoRRnq1goUzKCW4uJANNDecE2SHCKHKrAvjSdHhJz51KV%2BcPkTBBHL5iDNX%2F%2BP%2FRMDI6B8YPwHAIfXDrrGq7e0xXLmDHQvkhFsWFV5%2B6nrDvlTOUKCCk4HLObNx0GqfjulBHiIvjUDjpy9cGXjZ4a4MId1a2UGr6aOxvLeLokLvjWYiKSD9bIeQurAQDnLwGO8NdZVT4RNh0GUg1nxC0XMY1r3kWsrxA8daztx6G8gX%2BBILXXnQCtX4q7bzwyOqjv%2FfxJ510qbTN56eKmzl77aXSSaZi1jdVrb2aRIN4SNWSaX9ZwHEaXuNT65x&allow_caching=true&sz=w2940-h1662-rw" alt="Me">
+  <img class="about-photo" src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU8GGvVTtSCi%2FvUiB1Iab%2FglFO%2F7TGMSO9s%2BRxBf7Qc81KwQNhJ3h29PCriahCezM9FL5wGtueqDRS8%2FYGdh4u1M02Un2yORKZd96zbpoJHky%2Bh8XRzt1xrUlNjZ7z9IA6rKK1cs6HZkxVTK1U%2BNpbVA1RZHRsYupD4G23he68z1P9cH4%2B9%2BgPKZxXGNbKBZpckAHdrEkWSL2WhdSgFXM9bQm4lY4nGW%2FdrmfFPZZjB66%2BCIpqg4Aukp2p%2BOx6qIFF94htqzJoOBaWBtVC3g4r7i5%2FIIbxXV2kPeWljpKNC8uILI3n%2FsXwN5ywlbvFqCg5tvVoRRnq1goUzKCW4uJANNDecE2SHCKHKrAvjSdHhJz51KV%2BcPkTBBHL5iDNX%2F%2BP%2FRMDI6B8YPwHAIfXDrrGq7e0xXLmDHQvkhFsWFV5%2B6nrDvlTOUKCCk4HLObNx0GqfjulBHiIvjUDjpy9cGXjZ4a4MId1a2UGr6aOxvLeLokLvjWYiKSD9bIeQurAQDnLwGO8NdZVT4RNh0GUg1nxC0XMY1r3kWsrxA8daztx6G8gX%2BBILXXnQCtX4q7bzwyOqjv%2FfxJ510qbTN56eKmzl77aXSSaZi1jdVrb2aRIN4SNWSaX9ZwHEaXuNT65x&allow_caching=true&sz=w2940-h1662-rw" alt="Me" />
   <div class="text-container">
     <p><b>Welcome!</b> I am Geeta Dungyel, a curious and enthusiastic learner from the scenic village of Samdrup Jongkhar. I am currently a Grade 9 student at The Royal Academy, where I enjoy exploring different subjects and expanding my understanding of the world. Learning new things excites me, and I am always eager to discover fresh ideas that broaden my perspective.</p>
     <p>Outside of academics, I am passionate about discovering new hobbies, meeting diverse people, and taking on challenges that help me grow as an individual. I believe that every experience, whether big or small, teaches us something valuable. With this mindset, I stay motivated by the endless possibilities the future holds and remain committed to making the most of every opportunity that comes my way.</p>
@@ -159,7 +174,7 @@
 
 <section id="biodata">
   <h2>Biodata</h2>
-  <img class="about-photo" src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU4gQfqg7wBu0YndhLvJDcPE0E35G2HJV2hF9PM1dNBY1U0c2wO1IvPN5eMLNk9LWqBf5ePcdxy%2Bz5gxHoOCYbvai5rcvXsPh%2FjrAeFYfEBl5ShiWhIEFOIccKjDbI%2Fz8muVngx8IeUjNSjQOljaVVLqGSQd4umFoCmJemhFgyvzeAmNlSoOkIBeBzRXTvRo0WsZqyVP0mcY5TBxczVmiYmyT11VvenOQRYf9LIaJXlsWxMKVSjqANf%2FFZVLftHo%2FgU0Ue%2FbsywADQe%2FiyoF%2BOsZjxeAeQ7qj1G4S%2FqV6qtEf9ezjgqv6ynPWU%2B0RtB9P5DwgpfQEpLhyL6h5M7mci5qmUONCnTsDb6TQiPQARS2aPU7jr615vZyf4LgxiD7c8Kh5CcWAj3B458aixvh%2FG%2FlNSAVTEnt5c1QfxubCLVB5UOWEivf4Y9S2cdShgmgG4gMYCtxO7LwXc0EEqkipYcvZX8c%2FOQODY7BTpHm66QPuCfxjVZ7K0prRvpgodoK8FteSgduSuqCJf5vvZC%2BW9TVlu%2BnFuMowUF9GplJhSr%2Fmeb%2B6m7seQup8ONpkzrYVuogGBOVmsbKtO%2Bf553Xq1olW8gzbW9SQcuDtw71rR7GDiVGU0R6TNpeW48ceo%3D&allow_caching=true&sz=w2940-h1662-rw&auditContext=forDisplay" alt="Geeta Dungyel">
+  <img class="about-photo" src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU4gQfqg7wBu0YndhLvJDcPE0E35G2HJV2hF9PM1dNBY1U0c2wO1IvPN5eMLNk9LWqBf5ePcdxy%2Bz5gxHoOCYbvai5rcvXsPh%2FjrAeFYfEBl5ShiWhIEFOIccKjDbI%2Fz8muVngx8IeUjNSjQOljaVVLqGSQd4umFoCmJemhFgyvzeAmNlSoOkIBeBzRXTvRo0WsZqyVP0mcY5TBxczVmiYmyT11VvenOQRYf9LIaJXlsWxMKVSjqANf%2FFZVLftHo%2FgU0Ue%2FbsywADQe%2FiyoF%2BOsZjxeAeQ7qj1G4S%2FqV6qtEf9ezjgqv6ynPWU%2B0RtB9P5DwgpfQEpLhyL6h5M7mci5qmUONCnTsDb6TQiPQARS2aPU7jr615vZyf4LgxiD7c8Kh5CcWAj3B458aixvh%2FG%2FlNSAVTEnt5c1QfxubCLVB5UOWEivf4Y9S2cdShgmgG4gMYCtxO7LwXc0EEqkipYcvZX8c%2FOQODY7BTpHm66QPuCfxjVZ7K0prRvpgodoK8FteSgduSuqCJf5vvZC%2BW9TVlu%2BnFuMowUF9GplJhSr%2Fmeb%2B6m7seQup8ONpkzrYVuogGBOVmsbKtO%2Bf553Xq1olW8gzbW9SQcuDtw71rR7GDiVGU0R6TNpeW48ceo%3D&allow_caching=true&sz=w2940-h1662-rw&auditContext=forDisplay" alt="Geeta Dungyel" />
   <div class="bio-text">
     <p><b>Name:</b> Geeta Dungyel</p>
     <p><b>Age:</b> 15</p>
@@ -175,16 +190,16 @@
   <h2>My School Life</h2>
   <div class="schoollife-text">
     <p>School life at The Royal Academy is filled with learning, friendship, and fun. Every day brings new lessons and experiences that help me grow both academically and personally.</p>
-    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/83a36f99-0034-4452-ae5b-4d6dd87b9311/IMG_0817.jpg" alt="TRA">
+    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/83a36f99-0034-4452-ae5b-4d6dd87b9311/IMG_0817.jpg" alt="TRA" />
     <p>My teachers encourage curiosity and teamwork, making subjects interesting and challenging. I enjoy participating in various activities, from sports to art, which help build my skills and confidence.</p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0kRlhGiE-rDCEYN5eox1n0AbrFw0QBj6Iw&s" alt="TRA">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0kRlhGiE-rDCEYN5eox1n0AbrFw0QBj6Iw&s" alt="TRA" />
     <p>With supportive friends and mentors by my side, I feel inspired to work hard and strive for excellence. School life here is about making memories, overcoming challenges, and celebrating every achievement along the way.</p>
-    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/aa55776a-400a-4b44-ae0e-a77fff16f82a/Graduation+Ceremony+Group+Photo.jpg" alt="TRA">
+    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/aa55776a-400a-4b44-ae0e-a77fff16f82a/Graduation+Ceremony+Group+Photo.jpg" alt="TRA" />
   </div>
 </section>
 
-<section id="gallery">
-  <h2>Gallery</h2>
+<section id="gallery-pics">
+  <h2>Gallery - pics</h2>
   <div class="gallery">
     <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEVU5M%2FeqiXSfQyFVXir3efTnDmQFmORRgTqTDRGT5T1xdJFBezV3D0a6rWoSbYvwr9QldjeHAHBDdtQmbN3SWhneRhUbf9Lx6e60fBvhT9KS0kVHHQ%2FyU4x1NUPKCegah4JVn%2BV3O%2BIzvGradrh82FmKJh6ug0oQZt9uCT3doaKV0f%2BP8RdOFtx3GOxA9NXuTxb2ZPwFXhbhsVVKDXTOe83NBJqSwLo%2BbGk%2BwxgknEoE%2BGWgHDKhAETViZdIWNg6Poh6MiAaORn7jCHDJfbSsD5CgDwGW%2BsYTSl%2FV13P8G6rDBTWllupfUUacOPslc8qPlT1SgSmoXlW9FbVI4GaQh6o9GssU6Mo7wqfl9pE7kQ6WCE0ESMz1NtMS1vyMmu5Vpgat%2FeaNFNFM7%2FOK3MHEUfjEntodcLHLI67Zw0Ha760nE8W11%2F%2FzgudKTg144FBaAPFvNnB%2FAnK7W%2F03OEmvWqZI3IkHPCp466T8W4zVqf8MrOkrCQ2RiL70Hk9dIvtJBGiQbEFcvz2vDWwdI2ReIIo1VUOMHdPfDjqgwM9Wxawmo2p4bZbPR%2BZg0%2B8ALA6w7hK7j86SOqycb6ZB%2FMcdd3&allow_caching=true&sz=s330-c" alt="Gallery Image 1">
     <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEWtSMirPTNYrmCsoS%2FQpEmxLqIqtmVAQHy62ZykiIcQX0WI0ebtkBSi%2Bu4ulR4FLy%2Bx%2FI4lu4oQ9qyogbxrOjAbkBwsHpZnwYyWnLzt1qk9fM4ExiTbAEnib39LQk3htRo6RsAffE2sCTb42E4zGfgjAY3XdROcylHCL8cYiAPwhi%2F16wWSEmdpsaRNxqCzfVhP2JyQ9stOy7ExdEVTDj8ZIfsWxo4nlRSF1CuvzMEgfJZ60Q7NEHO5aEk14dWiQgqfqW3%2B%2FTPzKddzOAYB1Q6qKjNDKlLxHepseSr8O2UEmPcdArbe4U9GFyzHAiwOBdnEANgVGuc6IY%2FIoGzl7Rvq4GOeuzRD9xqQE7avgPkDMjSAGMBb%2BGch1sGFsB2EIdAxQL6QMJz6nWH4crx6OOsmlIARuujJC3riueWM94kaMrp4Qoyxb%2FBCR1Kkp8PkkIFUh7UeFxATlsklnsYllkJqvF0fZTlw4Uc1voqGxf2nnBzqMtZB54Uj50HU5kZeVMyphel2svASUJlz5wCCyIFNUm57gobWmQoZ7PVbYS6MZ92opFpqQvcQEd2gVN3j6Tu2YPANiLIypkT57urzwoW9mAQbVejleXK1&allow_caching=true&sz=s330-c" alt="Gallery Image 2">
@@ -199,9 +214,31 @@
   </div>
 </section>
 
+<section id="gallery-videos">
+  <h2>Video Projects</h2>
+  <h3>MTV-Grade 7</h3>
+  <div class="MTV">
+    <iframe 
+      src="https://drive.google.com/file/d/1ESnyqyfQCnqlEADb4IEJMGqZp5lcqAJt/preview"
+      width="640" 
+      height="480" 
+      allow="autoplay">
+    </iframe>
+  </div>
+  <div class="VideoVlog">
+    <h3>Video Vlog 2025</h3>
+    <iframe 
+      src="https://drive.google.com/file/d/1xu78tPqzAKI6I9AYBI3PblafZEuLCVt8/preview"
+      width="640" 
+      height="480" 
+      allow="autoplay">
+    </iframe>
+  </div>
+</section>
+
 <section id="contact">
   <h2>Contact Me</h2>
-  <img class="contact-image" src="https://thumbs.dreamstime.com/b/call-icon-symbol-phone-receiver-contact-sign-telephone-hotline-talk-logo-mobile-connection-support-service-office-217101276.jpg" alt="Contact Icon">
+  <img class="contact-image" src="https://thumbs.dreamstime.com/b/call-icon-symbol-phone-receiver-contact-sign-telephone-hotline-talk-logo-mobile-connection-support-service-office-217101276.jpg" alt="Contact Icon" />
 
   <div class="contact-card">
     <p><b>Name:</b> Geeta Dungyel</p>
