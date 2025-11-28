@@ -1,296 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Geeta Dungyel</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("https://i.etsystatic.com/34102148/r/il/f4130c/3707430903/il_fullxfull.3707430903_iaxo.jpg") no-repeat center center / cover fixed;
-      color: #333;
-      scroll-behavior: smooth;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - MySite</title>
+<link rel="stylesheet" href="style.css">
 
-    nav {
-      position: fixed;
-      top: 0;
+<style>
+  /* Basic styling — remove if using external style.css */
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Hamburger */
+  #menu-toggle { display: none; }
+
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .navbar ul {
+      position: absolute;
+      top: 60px;
+      left: 0;
       width: 100%;
-      background-color: #9B7FCF;
+      display: none;
+      flex-direction: column;
+      background: #333;
+      padding: 20px 0;
+    }
+    #menu-toggle:checked ~ ul {
       display: flex;
-      justify-content: center;
-      padding: 12px 0;
-      z-index: 99;
     }
+    .menu-icon {
+      display: flex;
+    }
+  }
 
-    nav a {
-      color: white;
-      padding: 8px 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  /* Hero */
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f4f4f4;
+  }
 
-    nav a:hover {
-      background-color: #E6E6FA;
-      color: #9B7FCF;
-    }
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: #fff;
+    margin-top: 30px;
+  }
+</style>
 
-    section {
-      padding: 100px 20px 50px 20px;
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(255,255,255,0.85);
-      border-radius: 15px;
-      margin-bottom: 50px;
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #9B7FCF;
-    }
-
-    img {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-      border-radius: 10px;
-    }
-
-    .text-container, .bio-text, .schoollife-text {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-      margin: 20px auto;
-      max-width: 700px;
-    }
-
-    .about-photo {
-      width: 250px;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-      margin: 20px auto;
-      box-shadow: 0 2px 10px #bbb;
-    }
-
-    .contact-card {
-      background-color: rgba(155, 127, 207, 0.15); 
-      max-width: 300px;
-      margin: 30px auto; 
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(155,127,207,0.4); 
-      font-family: Arial; 
-      text-align: center;
-      line-height: 1.8;
-      border: 1px solid rgba(155,127,207,0.5); 
-      color: #4B2E83; 
-    }
-
-    footer {
-      text-align:center;
-      padding:10px;
-      background-color:#f2f2f2;
-      font-family: Arial, sans-serif;
-    }
-
-    .contact-image {
-      width: 120px;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px #bbb;
-    }
-
-    
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      justify-items: center;
-    }
-
-    .gallery img {
-      width: 100%;
-      max-width: 200px; 
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    @media screen and (max-width: 768px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .gallery img {
-        max-width: 100%;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-      .gallery img {
-        max-width: 100%;
-      }
-    }
-    body {
-  padding-top: 70px;
-}
-  </style>
 </head>
 <body>
 
-<nav>
-  <a href="#aboutme">About Me</a>
-  <a href="#biodata">Biodata</a>
-  <a href="#schoollife">School Life</a>
-  <a href="#gallery-pics">Gallery - pics</a>
-  <a href="#gallery-videos">Gallery - videos</a>
-  <a href="#Achievements">Achievements</a>
-  <a href="#Reports">Reports</a>
-  <a href="#contact">Contact</a>
-  
-</nav>
+<!-- Navbar -->
+<div class="navbar">
+  <div class="logo">MySite</div>
 
-<section id="aboutme">
-  <h1>Geeta Dungyel</h1>
-  <img class="about-photo" src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU8GGvVTtSCi%2FvUiB1Iab%2FglFO%2F7TGMSO9s%2BRxBf7Qc81KwQNhJ3h29PCriahCezM9FL5wGtueqDRS8%2FYGdh4u1M02Un2yORKZd96zbpoJHky%2Bh8XRzt1xrUlNjZ7z9IA6rKK1cs6HZkxVTK1U%2BNpbVA1RZHRsYupD4G23he68z1P9cH4%2B9%2BgPKZxXGNbKBZpckAHdrEkWSL2WhdSgFXM9bQm4lY4nGW%2FdrmfFPZZjB66%2BCIpqg4Aukp2p%2BOx6qIFF94htqzJoOBaWBtVC3g4r7i5%2FIIbxXV2kPeWljpKNC8uILI3n%2FsXwN5ywlbvFqCg5tvVoRRnq1goUzKCW4uJANNDecE2SHCKHKrAvjSdHhJz51KV%2BcPkTBBHL5iDNX%2F%2BP%2FRMDI6B8YPwHAIfXDrrGq7e0xXLmDHQvkhFsWFV5%2B6nrDvlTOUKCCk4HLObNx0GqfjulBHiIvjUDjpy9cGXjZ4a4MId1a2UGr6aOxvLeLokLvjWYiKSD9bIeQurAQDnLwGO8NdZVT4RNh0GUg1nxC0XMY1r3kWsrxA8daztx6G8gX%2BBILXXnQCtX4q7bzwyOqjv%2FfxJ510qbTN56eKmzl77aXSSaZi1jdVrb2aRIN4SNWSaX9ZwHEaXuNT65x&allow_caching=true&sz=w2940-h1662-rw" alt="Me" />
-  <div class="text-container">
-    <p><b>Welcome!</b> I am Geeta Dungyel, a curious and enthusiastic learner from the scenic village of Samdrup Jongkhar. I am currently a Grade 9 student at The Royal Academy, where I enjoy exploring different subjects and expanding my understanding of the world. Learning new things excites me, and I am always eager to discover fresh ideas that broaden my perspective.</p>
-    <p>Outside of academics, I am passionate about discovering new hobbies, meeting diverse people, and taking on challenges that help me grow as an individual. I believe that every experience, whether big or small, teaches us something valuable. With this mindset, I stay motivated by the endless possibilities the future holds and remain committed to making the most of every opportunity that comes my way.</p>
-    <p>In addition to my academic and personal pursuits, I have a strong interest in creative and relaxing activities. Painting allows me to express my emotions and imagination through colors and shapes, giving me a peaceful space to unwind. I also enjoy watching movies that inspire, entertain, or teach meaningful lessons, as well as reading books that open up new worlds and perspectives. These hobbies help me stay balanced, creative, and continuously curious about life.</p>
-    <p>Furthermore, I am passionate about discovering new hobbies, meeting diverse people, and embracing challenges that encourage personal growth. I am motivated by the endless possibilities that the future holds and am committed to making the most of every opportunity along the way.</p>
-  </div>
-</section>
+  <input type="checkbox" id="menu-toggle">
+  <label class="menu-icon" for="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
 
-<section id="biodata">
-  <h2>Biodata</h2>
-  <img class="about-photo" src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEU4gQfqg7wBu0YndhLvJDcPE0E35G2HJV2hF9PM1dNBY1U0c2wO1IvPN5eMLNk9LWqBf5ePcdxy%2Bz5gxHoOCYbvai5rcvXsPh%2FjrAeFYfEBl5ShiWhIEFOIccKjDbI%2Fz8muVngx8IeUjNSjQOljaVVLqGSQd4umFoCmJemhFgyvzeAmNlSoOkIBeBzRXTvRo0WsZqyVP0mcY5TBxczVmiYmyT11VvenOQRYf9LIaJXlsWxMKVSjqANf%2FFZVLftHo%2FgU0Ue%2FbsywADQe%2FiyoF%2BOsZjxeAeQ7qj1G4S%2FqV6qtEf9ezjgqv6ynPWU%2B0RtB9P5DwgpfQEpLhyL6h5M7mci5qmUONCnTsDb6TQiPQARS2aPU7jr615vZyf4LgxiD7c8Kh5CcWAj3B458aixvh%2FG%2FlNSAVTEnt5c1QfxubCLVB5UOWEivf4Y9S2cdShgmgG4gMYCtxO7LwXc0EEqkipYcvZX8c%2FOQODY7BTpHm66QPuCfxjVZ7K0prRvpgodoK8FteSgduSuqCJf5vvZC%2BW9TVlu%2BnFuMowUF9GplJhSr%2Fmeb%2B6m7seQup8ONpkzrYVuogGBOVmsbKtO%2Bf553Xq1olW8gzbW9SQcuDtw71rR7GDiVGU0R6TNpeW48ceo%3D&allow_caching=true&sz=w2940-h1662-rw&auditContext=forDisplay" alt="Geeta Dungyel" />
-  <div class="bio-text">
-    <p><b>Name:</b> Geeta Dungyel</p>
-    <p><b>Age:</b> 15</p>
-    <p><b>Grade:</b> 9</p>
-    <p><b>School:</b> The Royal Academy</p>
-    <p><b>Village:</b> Pemathang, Samdrup Jongkhar</p>
-    <p><b>Hobbies:</b> Reading, meeting new people, exploring interests</p>
-    <p><b>Ambition:</b> Learning and personal growth</p>
-  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="interests.html">My Interests</a></li>
+  </ul>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Welcome to my website about me!</h1>
+  <p>On this website you will be able to know about me, my interests, and my life.</p>
 </section>
 
-<section id="schoollife">
-  <h2>My School Life</h2>
-  <div class="schoollife-text">
-    <p>School life at The Royal Academy is filled with learning, friendship, and fun. Every day brings new lessons and experiences that help me grow both academically and personally.</p>
-    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/83a36f99-0034-4452-ae5b-4d6dd87b9311/IMG_0817.jpg" alt="TRA" />
-    <p>My teachers encourage curiosity and teamwork, making subjects interesting and challenging. I enjoy participating in various activities, from sports to art, which help build my skills and confidence.</p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0kRlhGiE-rDCEYN5eox1n0AbrFw0QBj6Iw&s" alt="TRA" />
-    <p>With supportive friends and mentors by my side, I feel inspired to work hard and strive for excellence. School life here is about making memories, overcoming challenges, and celebrating every achievement along the way.</p>
-    <img src="https://images.squarespace-cdn.com/content/v1/68b41787b0ee6a1df9470c7d/aa55776a-400a-4b44-ae0e-a77fff16f82a/Graduation+Ceremony+Group+Photo.jpg" alt="TRA" />
-  </div>
-</section>
+<!-- Image -->
+<img src="https://via.placeholder.com/900x300" style="width:100%; display:block; margin-top:20px;">
 
-<section id="gallery-pics">
-  <h2>Gallery - pics</h2>
-  <div class="gallery">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEVU5M%2FeqiXSfQyFVXir3efTnDmQFmORRgTqTDRGT5T1xdJFBezV3D0a6rWoSbYvwr9QldjeHAHBDdtQmbN3SWhneRhUbf9Lx6e60fBvhT9KS0kVHHQ%2FyU4x1NUPKCegah4JVn%2BV3O%2BIzvGradrh82FmKJh6ug0oQZt9uCT3doaKV0f%2BP8RdOFtx3GOxA9NXuTxb2ZPwFXhbhsVVKDXTOe83NBJqSwLo%2BbGk%2BwxgknEoE%2BGWgHDKhAETViZdIWNg6Poh6MiAaORn7jCHDJfbSsD5CgDwGW%2BsYTSl%2FV13P8G6rDBTWllupfUUacOPslc8qPlT1SgSmoXlW9FbVI4GaQh6o9GssU6Mo7wqfl9pE7kQ6WCE0ESMz1NtMS1vyMmu5Vpgat%2FeaNFNFM7%2FOK3MHEUfjEntodcLHLI67Zw0Ha760nE8W11%2F%2FzgudKTg144FBaAPFvNnB%2FAnK7W%2F03OEmvWqZI3IkHPCp466T8W4zVqf8MrOkrCQ2RiL70Hk9dIvtJBGiQbEFcvz2vDWwdI2ReIIo1VUOMHdPfDjqgwM9Wxawmo2p4bZbPR%2BZg0%2B8ALA6w7hK7j86SOqycb6ZB%2FMcdd3&allow_caching=true&sz=s330-c" alt="Gallery Image 1">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEWtSMirPTNYrmCsoS%2FQpEmxLqIqtmVAQHy62ZykiIcQX0WI0ebtkBSi%2Bu4ulR4FLy%2Bx%2FI4lu4oQ9qyogbxrOjAbkBwsHpZnwYyWnLzt1qk9fM4ExiTbAEnib39LQk3htRo6RsAffE2sCTb42E4zGfgjAY3XdROcylHCL8cYiAPwhi%2F16wWSEmdpsaRNxqCzfVhP2JyQ9stOy7ExdEVTDj8ZIfsWxo4nlRSF1CuvzMEgfJZ60Q7NEHO5aEk14dWiQgqfqW3%2B%2FTPzKddzOAYB1Q6qKjNDKlLxHepseSr8O2UEmPcdArbe4U9GFyzHAiwOBdnEANgVGuc6IY%2FIoGzl7Rvq4GOeuzRD9xqQE7avgPkDMjSAGMBb%2BGch1sGFsB2EIdAxQL6QMJz6nWH4crx6OOsmlIARuujJC3riueWM94kaMrp4Qoyxb%2FBCR1Kkp8PkkIFUh7UeFxATlsklnsYllkJqvF0fZTlw4Uc1voqGxf2nnBzqMtZB54Uj50HU5kZeVMyphel2svASUJlz5wCCyIFNUm57gobWmQoZ7PVbYS6MZ92opFpqQvcQEd2gVN3j6Tu2YPANiLIypkT57urzwoW9mAQbVejleXK1&allow_caching=true&sz=s330-c" alt="Gallery Image 2">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fjpeg&attachment_token=AOo0EEV3Na4plEz71o14Lgs9q4xCP9XEkGEtDIGKDuqYWxF0xXi36hSEXwrs3M83lcPGCi4Ppyu5%2FApzXzmXRy%2Bks76t59eMQo4o59AN%2BZwqmMY06uoH26V7%2F7uzC1pkYHKOu%2Fj9njxnJKhhm0uGQ9L0YTka1EuZjyGKFBo0GPaOWn3%2F9N8YE%2BIGWN1d%2FQnAUYuwy9pUGtFOdOrmVA2JdOEbVrj8RoEnN1hE%2B8%2FFsz8vQkCNaG15z9tD3y154lrlxmYPPbC0rAwxkFN9pJm9giNfNKdaIyQoETkg7MiQjhwZR7LXPBZB%2BIfmHUp4NAl2tmOPPEePk0nFGpRmAsOwacnkAEGuSfa0Sb589baoTsz%2Blu0V%2FxEVPU5OosFe7fWhsknAnzfQw6dyo%2BnnYNN%2FdkUE5xm%2BIq79OzzX56%2BW1lmfxLkeLjUMWZ7xgMHVvIoC9CLj0v7FNXkasgXBHRxUQJzvBW%2BxAoD3MJWB0DMOyStk3A%2FLivzOJqnoBKxG%2FQ9BodnJpI4PKBt6AgT4W%2FsCXfxa3fj0mZSd6pNCbO5IH1LwW4lPghlj%2FxTDxG%2BqsnlPrWiML4W%2BnDslkyNJR0pAm68H%2FFo%2FJEl%2FxGS0mh%2FpVov%2BDQCScRP%2BFMHHLql4SYBk&allow_caching=true&sz=s330-c" alt="Gallery Image 3">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEWJvCs8mrbA4NtVvuwnLwf92x6v0vIISB6AXbof3CLSR%2BMSFtnieW9eMW2ARQxH9s%2BXgnM9fszBHT8OZGa2CNLE0Fl7NExhFW7DFpCknb5QkRKC14O%2FSqx7WN991DEvY%2FoIm1vG%2Fk2jBCND6XZ62pMDp%2FEOyfEWAn8yvesg0rwJZ7ri5XbtwB%2BXyBSPks66eDT6O18TTtnjSWhq6eSgfrjiekou0rw4NLtyMdSxJf59bPO9JD4u7Bu%2BCAxWxXZA37gcHAk%2FfpDIIT9VAxZlYIrSxjAFavACu%2FG7lvNUUIQoIw0lmjnzqgpLkPfXi%2FU6dstCV83v06CoziqWdExU6EfwN6WIGhqSlq%2BnjjiE0CG5cThQ%2FQc2xMV0cMRP5pLN8mAIihk961uv6%2Fx0rUlQufGwRhyif3P2HgNXpI8JpoImNL9FO1pa8d9%2FkleIYB3cTXYXB%2F7cFg%2FYDz9ltwzdViU2TqBypyvW2I1rdvpxiNnzyhOk6mtyPlcLMbrt1w1l7gxgU%2BeEvq5X3KN%2Ff5etDsqiP9a8%2BLCJkiiQ%2F5L%2B6kXet%2Fu5dJy9ZD3Rbd178qohTEXzwCG4l5VI73Vle9iRRlfy&allow_caching=true&sz=s330-c" alt="Gallery Image 4">
-    
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEVY1J%2BqC%2F6GyM33BT9Is6n8h1SfuzRvPWJ57o9EOxXcHLvA6o6A23nTQb5TH1EIDDP%2BvBXpL5tFluy7dNhA0cYwbwlnzvE%2F%2B%2B6d%2F6gVydk%2FoKT%2B%2FZbjSf3DW54U3OkbWA1CfT3MkMM21%2F11MfNvkPpm7JradyQpckzzvUADZkXKe3sQ8UM7T2Y5FYvtc77n07igg8GKDZWCMqK%2FmsAVgVYVyH6iMvK6YcgmthVVigwsZK9dP1JPQ99N0CBXdo%2F9wx2ExjnRjczIChE3QNSjVsRYN1SAYN4HaRYTdfGnz995jvTuhaNEFMHHO5P0tcPcGFHkzR%2BBgTDCU7ofuWdQ06TMvTZCmfL%2BsGulsX8F1Z8iYPt0AIj6PD8Aj0MLF5Y01g9L%2BpLhKwYhTUBp0cFnyKMp70PAJhaB92QDI4HXexTSgqkkEfiJbtF%2FJyts5Lxud10kPbmR8ahxJWR5EDh7Me%2Fc474CZM0pcqDukhROsjB2EJpNVsCu6Hlt%2BlJoO%2B6w%2F8kmjRyildfpGDpq2anz1zt40FezjdzRBGxbXh9xvImzB%2FBFHU3RHY0gvGoZiDxzIDQbk7qTzoKlB65%2B7kewm9xq0FI%2Bec61&allow_caching=true&sz=w512" alt="Gallery Image 6">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEWY0%2F9bLUXRP8ZGV0LAsX%2Bbn%2Bx7kG5wbGLmChQOu6BdjGbxMoRAJ%2FAbQ2BtUpSTKtmGSKgZ4hUxQbeMpQ7uEwz5JEHMdQdOMBHzn0PVxoZ9MyuKq2KjcUbIuf77sFEIcgNCLkXLnppUYFyXDHD6zPEcaUbmYS46EeFmoxUTuWKvwqhNVQvsSbbb58PbPnsj4TQpFpzvnlv8CKxBc4rnxrVNuhwYtd6nY7B0WFYZSolpWAvfxNL5%2F2lbalSkK0iyO5z1DL28z1HqeLbEouT%2BC21LXd4mODx5IaW2Y4M65EAdt1PzpwIHJuMQ%2FT%2FZZ%2BynD8Sw%2BJwyz6VOS5FJlPn3b42VMoOrPgHC6rLGYRejuMgvCxExE3yZttr%2BVf61Hf3fcJ4Afo68GwBGQlEVJkk%2F%2BgeRbblOsOX4JFkyewxLT7q1f2GoEetPsXhgUsYnKQqG91MHmPRepVyQIs6eETzImVG2UcItwE98aM%2FcVdrTpYe7Og1rtGNgtWV27himsQ9yjDAyA48W6mlvKAhofamIh9CILdAQJsolent3azXZV7%2BGX1PLQZMBmjyvGDpKxpyLp4gwNY0ML24Nuu49DbUccofakw%3D%3D&allow_caching=true&sz=w512">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEVHbuW0QxeFMYYMIyB0qgEyvjVbShSDiZEobhK5Q%2FDRlk4U18r5JQbQwKkxa0RcDyRV19b5tOBZ29UjGyHTDeqY%2FF877d5TV7ozWfDKCw6FI2icv5ewMRbAnJIXSCi6P6SgvJ8pGb7Tc7IxnVKoKJH45eAh5LIDWdwGwarEQfmQj3pk1iFwfMNNJA4krSSOWeoBhF78Y0SzgOgjqIcMuCLkXpUVZbyIb%2F4BhKqQ%2FDXmOUroMA%2BGvlBZPf2bpJ55UFzv%2B1XI47%2Fc2gtXgOI8IX7gixQhp10ExggHVWTyGJG5bp9p7HN5MQ9HInO6flt7hklu8jkKFctEq9pOsZ5qc0yYgVXCc3%2Fhqk942fMCd%2FKup02HmlwGB6rAylWA2ivgeVXAkOnwnz%2Fi3j9zipuBSkOMQvdx%2BAqYNqn1Xh9qZrfaA8RR4ZNfrlLZUUtc1Hc8CnylPFPZoDuYbn79VFUWhzXwXpZVVNzPaXau8jzdXZ6Y1lVIslXOWbDWM8ma05vKoYULXUON00uHeGijFtiJyVKNA53pvWCZLew%2F1Pd1mA9mPiZ6anHVjDcYfXVdVODf3jzQNMcnQXch8ivUIAXdi49%2B2w%3D%3D&allow_caching=true&sz=w512" alt="Gallery Image 8">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEVyUEBNoN7EtWg59PTK%2F1KN%2FmOIWL%2FZx1HvLbuME3K1ZQnHyxCRCxt1tmcGL0I%2BZiNL0RWkw%2B08Lr7LVR92k5MYw7dzL48lxYHKs%2Fo1cWlgX2wbOVNZlkz4x0kR92tsO4%2BplB%2B0R7%2BqKCnpmo1vXWY%2BiV6XOG3aP87eUP2a41dOq3RTMwwA%2FKQugdLwpZZDQ7wKocaFDlq6CL5VIgTH8GYZK59jqHjDP8U8BJZTEtgCDFGqc3OIXetoqPXGfPTIcVFSuj3HFDAE56del%2BcpZ2Ng1aK2%2BoYubYgwqXDq7F7stAkk4S1wwaY6iESc5%2BBGoC5r3tV071dc2CSqlKwezHd%2BBQRqHjOmT1Ds463LjAqyHY%2BdBI5a%2BipFgWctR25qAoUJNUJyYuFdeT8gXx%2F9tYPl07pZ31rKTJvgbQoachBvpRMeIDzse%2FlW4BEY3IHpNr9OSDAf4rsYFG1BqEMCnND4F%2FZ55KKOOp%2FtNKcI6F8d1O0OHm5beYKioevmOa6pLf14rqiwgyg9H1Ys7xt4fYlC87UuEeByGxJxb4ErjXb2fucRQAG4zu0kX%2BVy79YsJHg0vE4cSomrbLLPSd81Jabmj6w%3D&allow_caching=true&sz=w512">
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fheic&attachment_token=AOo0EEV1jG8qCZkbauWBhE3id8d8Wnu7bU4CUN3DflDpOeWnKYAe4PZ5Ul6aLheqLYp5TD4WiSjO%2BhpAMmLFNbHdlt9Xvu3FBzPowxmaFM81MgEzSqRxbylixprLye4xqkT4LkDPwVeQqlKGnrOYfprgY5BOWau0S6OdbQACc1RyFNYxEnFiKYRYcjxS%2FU%2BkLcsc3fZ7ztUElwVS%2BmAXx5eGQI9%2BOan09qw%2FZCwrsSDx%2BCCYdC7iOrMnRXyH%2FB1mV8TpFx%2Fqe8HkEsWMNYkp212tVnz8hcuELOfv70BDQHMqy5DGHd7qg1mDLGAqU9CmWpuhASpc8olywDVwHOO6g9BInbNu%2FogyUHhmt02rg0O7M%2FaCrp57gnyqRKmt00h%2BWWIEwsZed59h89jViiF6TgZphdreskYqFmkIaf%2FmTH3nAEJu80AlEJ%2BmZVIVF3dM6XnQ%2F9Zz0OlJxAQwkG9IjFBtIYZAKBLJav6o9I1Z1L4ZtgspzISWOv2HvpgAfhDjdQ9pu6MlLTO2ayOjRE%2FHN4vFpTvPvf%2BwOT3pSQY70YvAqEbfj4E%2F%2F%2FVy1o4MqAF9HiMspBb%2BYEeGrcZKCAlxrkU6uCLlm3g%3D&allow_caching=true&sz=w512" alt="Gallery Image 10">
-    
-  
-  </div>
-</section>
-
-<section id="gallery-videos">
-  <h2>Video Projects</h2>
-  <h3>MTV-Grade 7</h3>
-  <div class="MTV">
-    <iframe 
-      src="https://drive.google.com/file/d/1ESnyqyfQCnqlEADb4IEJMGqZp5lcqAJt/preview"
-      width="640" 
-      height="480" 
-      allow="autoplay">
-    </iframe>
-  </div>
-  <div class="VideoVlog">
-    <h3>Video Vlog 2025</h3>
-    <iframe 
-      src="https://drive.google.com/file/d/1xu78tPqzAKI6I9AYBI3PblafZEuLCVt8/preview"
-      width="640" 
-      height="480" 
-      allow="autoplay">
-    </iframe>
-  </div>
-</section>
-<section id="Achievements">
-  <h2>Achievements</h2>
-  <div class="certificates">
-    <p><b>Youth Ambassador Programme</b>.</p>
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEUmy4LGPcqjbL0QgGD88h3JkuZCCGtC1rNGL%2BD7H1cxGNUHvrJgMK%2F8W1E6xesZMC3ehPeA2QZgSj2g1RezlcFArk%2FxqtJOiLLD9L%2B25rV%2B7ijcE18FFZdHye%2Fvp6y6WUX7kij4Trt2ycNSPNPqD19YW4mleMZe9hoatFmylzrUW4wopf%2FWd8sQLkoG%2FVUuYTNBTGo3rps4o%2BRYfdVX59EQtHnWnpGpgc7fdCnoeYImXp%2BFwWETT%2BWboD327N6hkRtDHasB4GRrEpT1zy6cMJCrQnhfLMZl1fFvoBkv%2BW8hZEwRTS63YfqOQNu2hssr3UzJgJnOz%2BXiGW32FG4KQMUirsRpYOuAVw0SuzRlNBZz6wwGeogwLGleOVveclHC6jIsu%2FYX7OQXzn9gjrJfqS7l00sGzxyKSXWEyQ%2BZpDO9adyKRqanQIQc7WSaK61yuBmRcLbUTbpCIWA68k5TmtE%2BLuIIXIV2QMB08l38XRSZYDLUdwM7x%2Fi5%2FUN5GQ31I%2BduhiFMno4fuBrtdD2Pq2L1jkAk0A69%2FEvOegChl9JHy4a3KyUSBDFLt90inFUpXbZZ2aFKQi4NmYaAKiENuIeSdigHNwe8U5NKLA6fMBrfO%2BE%2BdVaHxqVGAfoznA%3D%3D&allow_caching=true&sz=w512" alt="YAP" />
-    <p><b>Women's Right</b></p>
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXWJwK4KmWJ0HhHLs2BmU139nSs1QRVCwbbLzxeHxghujoiadLBt3W%2FztjU6FX13niCN1BQbE8hx2yakLWJWBchTweTD5HrQM9Di91pl1s679f0N0Sp3UL%2BH9HE6L2iwxuqKMEIkqUmtxIhFFOdHbVr4BPot%2BTfeRLKldavAEiZ8fukG%2F4aAskxDPxAPVB8ZdCZl0JIt8slkOeGi8vwaSwWuwHmdOuELRW1G0GeAuRoIeDL5%2F%2BhKUxD58YCe4vBBXp1hsNtfsHJh5idupyLbppiPi7tp1cFgsF5lzj6yIyzuRzTRxYY80vKknh1%2BwQjg%2BUlQDo8%2FYVDG8OmtXXKr94nso0JIp%2FG0VqyNluk7XB9t2EPvEfJ7hm9ZQ8Srjd%2BnjDIyclJFQNkAMXE7u%2F%2Fe7K7LKSHvAw%2BeFslu2%2Bzb5Wwv2hrrwAH2tT8XsQnQfo9bzPegIOeUA4DpVy6s2qYl8OrkyPM6ruLMTR8jUFnme7l3Z4yqnFQ%2BGe2qjPK4WceBAY4ocMerJxqXao7Mh4g7n84UwBNPxkI09Z2BY3M91Y6kmtM22nOPZyYwXYTcvI%2Fl%2FAy3Xhi6ZCX%2Byx1p0rjJQ6SWXAJUQSPc6nIB3qggUIH8XQY4yiho%2BTWb7RHmg%3D%3D&allow_caching=true&sz=w512" alt="WomensRight" />
-    <p><b> Sports</b></p>
-    <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXe1P9AIoFlpwrnjfpaVQmhxeAakvixMiMfoZxN7uT3oz86qMxLPTpEKbqsPkdqdQoa3DVOKkVtTOxDzqpzsUf%2Ffil5eqvxZLzDkv38Aer5sms9eriFN2qrUEmgDGREao0qyR4eTsnOVQRjmwjqhy8RMwzS1z0AJLYqXs7AC6n4%2FCBS5IREVQvRG4IWCVPl%2FE4J8eaBMfErH6Z5Jx6anXCW9v%2B92OvE%2FeTGFwVlN3lOION2AgJes%2FreNu5ICErqQCAbaq0cz0%2BOppertsry6i0ZE%2FVi8RRL%2FKy2A%2F9b5G1ik4uVLfnNBN0byKNGsYwVLzY55wFZ2haag2N8nv%2BPKDxEgx1jlCdo7xIySvx55IPsWX3FhHRVlPX6E4MvQrTGGUgM8JXA7x0rNqoKMrwPGEh9VSaI%2B%2FOwI4ayqTSQBxIrw%2BqXqNNBdidpjM0gHz9uUmyFfVIJOELCayQD1G87AcLmqyBo%2F%2FMGPWxTFYsT7X%2BYlY0cUvSvNUmts5IX%2FKzDnT6amElv5vFMtCX3A5pL77J94zfebR0SWQyih2%2BLuwDL50%2BYnB1P0nMXXzI%2BPAK9lLPMol7m7QZG7wd%2FEepS86fT3Vv4KzO7B9FfMlG6xsvSwJ0MUqG5G6LzxvQ%3D&allow_caching=true&sz=w512" alt="sports" />
-  </div>
-</section>
-<section id="Reports">
-  <h2>Reports from school</h2>
-  <h3>Mid-Report_2024</h3>
-  <div class="Reports">
-    <iframe 
-      src="https://drive.google.com/file/d/1Odn_wOqeodnoik-drbfsohKQxHqDR3hf/preview"
-      width="640" 
-      height="480" 
-      allow="autoplay">
-    </iframe>
-  </div>
-  <div class="Reports">
-    <h3>Year end report_2024</h3>
-    <iframe 
-      src="https://drive.google.com/file/d/14IyqO29eKDN5ci_O1h1c2ix7wBvUQYVO/preview"
-      width="640" 
-      height="480" 
-      allow="autoplay">
-    </iframe>
-  </div>
-  <div class="Reports">
-    <h3>Mid-Report_2025</h3>
-    <iframe 
-      src="https://drive.google.com/file/d/10vE9KB8QcxGXAFRpH4j-VFdcAxafy1fZ/preview"
-      width="640" 
-      height="480" 
-      allow="autoplay">
-    </iframe>
-  </div>
-</section>
-<section id="contact">
-  <h2>Contact Me</h2>
-  <img class="contact-image" src="https://thumbs.dreamstime.com/b/call-icon-symbol-phone-receiver-contact-sign-telephone-hotline-talk-logo-mobile-connection-support-service-office-217101276.jpg" alt="Contact Icon" />
-
-  <div class="contact-card">
-    <p><b>Name:</b> Geeta Dungyel</p>
-    <p><b>Email:</b> geeta.dungyel2023@academy.bt</p>
-    <p><b>Phone:</b> 17405681</p>
-  </div>
-</section>
-
+<!-- Footer -->
 <footer>
-  @ 2025 Geeta Dungyel
+  &copy; 2025 MySite. All rights reserved.
 </footer>
 
 </body>
 </html>
+
