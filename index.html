@@ -203,9 +203,21 @@
     <iframe src="https://drive.google.com/file/d/1NIbGZjzeSnH2Hgn_MoGl-nowwKvb4a51/preview" width="400" height="400" allow="autoplay"></iframe>
     <iframe src="https://drive.google.com/file/d/1JIcV-xQ79uOFIhj0yKd5wmPc86hHiGQr/preview" width="400" height="400" allow="autoplay"></iframe>
     <iframe src="https://drive.google.com/file/d/1SxOOsQdhe8y9N9XTEZhTf51mN1zFMAaR/preview" width="400" height="400" allow="autoplay"></iframe>
- 
   </div>
 </section>
+
+<style>
+.gallery {
+  display: flex;       /* Enables flex layout */
+  flex-wrap: wrap;     /* Allows items to go to the next row if needed */
+  gap: 10px;           /* Adds space between iframes */
+}
+
+.gallery iframe {
+  flex: 0 0 48%;       /* Each iframe takes ~48% of the container width */
+  box-sizing: border-box;
+}
+</style>
 
 <section id="gallery-videos">
   <h2>Video Projects</h2>
